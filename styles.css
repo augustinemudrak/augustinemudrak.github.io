@@ -1,0 +1,22 @@
+body {
+	background-color: rgb(127,255,212);
+}
+.container {
+	width: 700px;
+	height: 700px;
+	background-color: black;
+	margin: 0 auto;
+	padding: 20px;
+}
+.box{
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	background: white;
+	margin: 10px;
+	text-align: center;
+	left: 10px;
+}
+.playerOne{
+	text-align: center;
+}
