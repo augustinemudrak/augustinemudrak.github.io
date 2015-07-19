@@ -6,17 +6,51 @@ body {
 	height: 700px;
 	background-color: black;
 	margin: 0 auto;
-	padding: 20px;
 }
 .box{
-	width: 200px;
-	height: 200px;
+	width: 210px;
+	height: 210px;
 	display: inline-block;
 	background: white;
 	margin: 10px;
 	text-align: center;
 	left: 10px;
 }
-.playerOne{
-	text-align: center;
+.playerSelect {
+
 }
+
+#test1{
+	float:left;
+}
+#test2{
+	float: right;
+}
+h1 {
+	text-align: center;
+	font-size:  50px;
+	font-family: fantasy; 
+}
+#winningimage {
+	width: 50%;
+	height: 50%;
+}
+
+
+
+
+/*HELPER STYLES*/
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
