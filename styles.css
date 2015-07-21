@@ -29,6 +29,7 @@ body {
 }
 #test2{
 	float: right;
+	margin-right: 20px;
 }
 h1 {
 	text-align: center;
@@ -50,10 +51,27 @@ h1 {
 }
 img {
 	margin-left: 400px;
-	width: 50%;
-	height: 50%;
+	width: 40%;
+	height: 40%;
+	border: solid black 10px;
 }
-
+.sungWins {
+	color: white;
+}
+.fritzWins {
+	color: white;
+}
+.tie {
+	color: white;
+}
+#playerOneName {
+	color: white;
+	font-size: 20px;
+}
+#playerTwoName {
+	color: white;
+	font-size: 20px;
+}
 
 
 /*HELPER STYLES*/

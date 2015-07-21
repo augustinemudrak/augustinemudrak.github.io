@@ -9,7 +9,7 @@ var i = 0;
 var gameArray= [[0,0,0],
 				[0,0,0],
 				[0,0,0]];
-
+ //// Player Name Input
 console.log("linked?");
 
 $("#playerOneButton").click(function(){
