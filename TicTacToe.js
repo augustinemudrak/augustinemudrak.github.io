@@ -2,6 +2,9 @@
 //  	$("playerOneButton").click(function(event){
 //  		$("<h1>").text("") = $("#playerOneInput").val()})
 // }
+ $(".fritzWins").hide();
+ $(".sungWins").hide();
+ $(".tie").hide();
 var i = 0;
 var gameArray= [[0,0,0],
 				[0,0,0],
@@ -28,13 +31,13 @@ $("#playerTwoButton").click(function(){
 		console.log("X");
 		gameArray[row][colum]= 1;
 		gameChecker();
-		return "url('http://i.imgur.com/n7U1bEYb.jpg')";
+		return "url('./Fritz.jpg')";
 		} else {
 		  i= i+1;
 		  console.log("Y");
 		  gameArray[row][colum] = 2;
-		  gameChecker();
-		  return "url('http://i.imgur.com/e9Hb6DSb.jpg')";
+		gameChecker();
+		  return "url('./Sung.jpg')";
 		}
 	}
 	//How to change a back ground image
@@ -46,7 +49,7 @@ $("#0").click(function(){
 $("#1").click(function(){
 	console.log("something came in the mail today");
 	$('#1').css('background-image', counter(0, 1));
-	$('#1').css('background-size' , 'cover'); 
+	$('#1').css('background-size' , 'cover');
 })
 $("#2").click(function(){
 	console.log("oh word?");
@@ -86,44 +89,48 @@ $("#8").click(function(){
 ///checks for winner
 var gameChecker = function gameChecker () {
 	if (gameArray[0][0] === 1 && gameArray[0][1] === 1 && gameArray [0][2] === 1) {
-		console.log("top row");
+		 console.log("yolo");
+		 return $(".fritzWins").show();
 	} else if (gameArray[1][0] === 1 && gameArray[1][1] === 1 && gameArray [1][2] === 1) {
-		console.log("middle row");
+		return $(".fritzWins").show();
 	} else if (gameArray[2][0] === 1 && gameArray[2][1] === 1 && gameArray [2][2] === 1) {
-		console.log("bottom won");
+		return	$(".fritzWins").show();
 	} else if (gameArray[0][0] === 1 && gameArray[1][0] === 1 && gameArray [2][0] === 1) {
-		console.log("left row");
+		return	$(".fritzWins").show();
 	} else if (gameArray[0][1] === 1 && gameArray[1][1] === 1 && gameArray [2][1] === 1) {
-		console.log("middle row");
+		return $(".fritzWins").show();
 	} else if (gameArray[0][2] === 1 && gameArray[1][2] === 1 && gameArray [2][2] === 1) {
-		console.log("right row");
+		return $(".fritzWins").show();
 	} else if (gameArray[0][0] === 1 && gameArray[1][1] === 1 && gameArray [2][2] === 1) {
-		console.log("left to right diagonal");
+		return $(".fritzWins").show();
 	} else if (gameArray[2][0] === 1 && gameArray[1][1] === 1 && gameArray [0][2] === 1) {
-		console.log("right to left diagonal");
+		return $(".fritzWins").show();
 	} else if (gameArray[0][0] === 2 && gameArray[0][1] === 2 && gameArray [0][2] === 2) {
-		console.log("top row sung");
+		return $(".sungWins").show();
 	} else if (gameArray[1][0] === 2 && gameArray[1][1] === 2 && gameArray [1][2] === 2) {
-		console.log("middle row sung");
+		return $(".sungWins").show();
 	} else if (gameArray[2][0] === 2 && gameArray[2][1] === 2 && gameArray [2][2] === 2) {
-		console.log("bottom won sung");
+		return $(".sungWins").show();
 	} else if (gameArray[0][0] === 2 && gameArray[1][0] === 2 && gameArray [2][0] === 2) {
-		console.log("left row sung");
+		return $(".sungWins").show();
 	} else if (gameArray[0][1] === 2 && gameArray[1][1] === 2 && gameArray [2][1] === 2) {
-		console.log("middle row sung");
+		return $(".sungWins").show();
 	} else if (gameArray[0][2] === 2 && gameArray[1][2] === 2 && gameArray [2][2] === 2) {
-		console.log("right row sung");
+		return $(".sungWins").show();
 	} else if (gameArray[0][0] === 2 && gameArray[1][1] === 2 && gameArray [2][2] === 2) {
-		console.log("left to right diagonal sung");
+		return $(".sungWins").show();
 	} else if (gameArray[2][0] === 2 && gameArray[1][1] === 2 && gameArray [0][2] === 2) {
-		console.log("right to left diagonal sung");
+		return $(".sungWins").show();
+	} else if (i > 8) {
+		return $(".tie").show();
 	}
 };
 
 
 
 
-// //the Modal
+
+//the Modal
 // console.log("The monster mash - linked")
 
 // var myButton = $('#modal-button');
@@ -138,4 +145,4 @@ var gameChecker = function gameChecker () {
 
 // closeButton.on('click', function() {
 //   datModal.toggle();
-// });
+// })
